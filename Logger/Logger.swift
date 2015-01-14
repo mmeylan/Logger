@@ -27,23 +27,23 @@ class Logger: NSObject {
     
     class func debug(message: String, fileName: String = __FILE__, functionName: String = __FUNCTION__, line: Int = __LINE__) {
         #if DEBUG
-            self.__log__("DEBUG  [\(fileName.lastPathComponent.stringByDeletingPathExtension).\(functionName):\(line)]: "+message)
+            self.__log__(message, "DEBUG", fileName, functionName, line)
         #endif
     }
     
     class func notice(message: String, fileName: String = __FILE__, functionName: String = __FUNCTION__, line: Int = __LINE__) {
-        self.__log__("NOTICE [\(fileName.lastPathComponent.stringByDeletingPathExtension).\(functionName):\(line)]: "+message)
+        self.__log__(message, "NOTICE", fileName, functionName, line)
     }
     
     class func warn(message: String, fileName: String = __FILE__, functionName: String = __FUNCTION__, line: Int = __LINE__) {
-        self.__log__("WARN   [\(fileName.lastPathComponent.stringByDeletingPathExtension).\(functionName):\(line)]: "+message)
+        self.__log__(message, "WARN", fileName, functionName, line)
     }
     
     class func error(message: String, fileName: String = __FILE__, functionName: String = __FUNCTION__, line: Int = __LINE__) {
-        self.__log__("ERROR  [\(fileName.lastPathComponent.stringByDeletingPathExtension).\(functionName):\(line)]: "+message)
+        self.__log__(message, "ERROR", fileName, functionName, line)
     }
 
-    private class func __log__(message: String) {
-        NSLog(message)
+    private class func __log__(message: String, _ header: String, _ fileName: String, _ functionName: String, _ line: Int) {
+        NSLog("\(header) [\(fileName.lastPathComponent):\(line) \(functionName)]: \(message)")
     }
 }
