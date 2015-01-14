@@ -19,10 +19,10 @@ How to use
 
 This code will output:
 
-    2015-01-14 11:24:52.227 Logger[3238:50509] DEBUG  [ViewController.viewDidLoad():16]: This is only visible when running in debug
-    2015-01-14 11:24:52.228 Logger[3238:50509] WARN   [ViewController.viewDidLoad():17]: This is a warning
-    2015-01-14 11:24:52.228 Logger[3238:50509] ERROR  [ViewController.viewDidLoad():18]: This is an error
-    2015-01-14 11:24:52.229 Logger[3238:50509] NOTICE [ViewController.viewDidLoad():19]: This is always visible
+    2015-01-14 11:54:09.284 Logger[3500:58936] DEBUG [ViewController.viewDidLoad():16]: This is only visible when running in debug
+    2015-01-14 11:54:09.285 Logger[3500:58936] WARN [ViewController.viewDidLoad():17]: This is a warning
+    2015-01-14 11:54:09.285 Logger[3500:58936] ERROR [ViewController.viewDidLoad():18]: This is an error
+    2015-01-14 11:54:09.285 Logger[3500:58936] NOTICE [ViewController.viewDidLoad():19]: This is always visible
 
 ***In order for the debug logging to work you need to set the DEBUG preprocessing flag. To do so, edit your target 
 build setting: Swift Compiler - Custom flags to add -DDEBUG as shown below:***
