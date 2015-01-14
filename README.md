@@ -33,3 +33,7 @@ Details
 --------------
 
 This class is based on NSLog which makes the logging very verbose in my opinion. The following *2015-01-14 11:24:52.227 Logger[3238:50509]* could be simplified or changed. I chose to use NSLog because it is thread safe unlike Swift println (to my last test and this [post](https://twitter.com/olebegemann/status/476460149948043266)). One improvement could be to use println and implement custom locking. This would allow to customize the whole "date - produt name" part.
+
+Licence
+--------------
+Code released under the [MIT license](http://opensource.org/licenses/MIT).
